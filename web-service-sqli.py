@@ -2,11 +2,7 @@ import zeep
 import random
 import ast
 
-
-# DON'T FORGET TO ENABLE XP_CMDSHELL if ERRORS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# check hosts file to match with ctf0X.root-me.org IP
-# change ctf url below :
-wsdl = 'http://ctf01.root-me.org/Contacts/ServiceContacts.svc?singleWsdl'
+wsdl = 'http://host.com/Contacts/ServiceContacts.svc?singleWsdl'
 client = zeep.Client(wsdl=wsdl)
 
 
@@ -205,4 +201,3 @@ PS > [System.IO.File]::WriteAllBytes("C:\ProgramData\Microsoft\Windows\Start Men
             for key, value in res.iteritems():
                 if key == 'ContactAddress':
                     print value
-
