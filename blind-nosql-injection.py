@@ -18,7 +18,7 @@ url = "http://" + host + ":" + uri
 start_time = timeit.default_timer()
 
 def view():
-	print "ARMATURE Technologies - NoSQL injection\n======================================="
+	print "NoSQL injection\n==============="
 	elapsed = timeit.default_timer() - start_time
 	m, s = divmod(elapsed, 60)
 	h, m = divmod(m, 60)
