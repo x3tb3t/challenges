@@ -1,4 +1,4 @@
-// kern32-rop-basic
+// Linux Kernel SMEP bypass
 
 #include <sys/mman.h>
 #include <unistd.h>
