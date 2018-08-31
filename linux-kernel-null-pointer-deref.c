@@ -1,4 +1,4 @@
-// Kernel x86 - Null ponter dereference
+// Linux Kernel Overflow - Null ponter dereference
 // gcc -m32 -static sploit.c sploit && chmod 755 sploit
 
 #include <sys/mman.h>
