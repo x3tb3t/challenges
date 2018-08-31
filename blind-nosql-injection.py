@@ -7,7 +7,7 @@ import timeit
 from itertools import product
 from string import ascii_lowercase
 
-users = ["admin", "Admin", "root", "r00t", "administrator", "Administrator", "administrateur", "Administrateur", "user", "User"]
+users = ["admin", "Admin", "root", "r00t", "administrator", "Administrator", "user", "User"]
 patterns = []
 creds = {}
 ucreds = {}
