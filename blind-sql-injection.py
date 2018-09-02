@@ -42,4 +42,3 @@ for x in xrange(0,32):
 			print "del: " + str(x)
 			#print enable
 			del enable[x]
-
